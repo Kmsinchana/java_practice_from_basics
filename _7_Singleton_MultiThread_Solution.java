@@ -2,7 +2,7 @@ public class _7_Singleton_MultiThread_Solution {
     private _7_Singleton_MultiThread_Solution(){
         System.out.println("the instance is created =>" +this.hashCode());
     }
-    private static _7_Singleton_MultiThread_Solution instance;
+    private static volatile  _7_Singleton_MultiThread_Solution instance;
 
     public static _7_Singleton_MultiThread_Solution getInstance(){
         if(instance== null){ //first check(no locker)
